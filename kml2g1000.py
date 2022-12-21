@@ -50,7 +50,7 @@ def export(kml):
     for when, coord in zip(whens, coords):
         # Parse data (e.g. 2022-06-09T15:42:34Z)
         date, time = when.split('T')
-        time = time[:-1] # strip Z
+        time = time[0:7] # strip Z
         lng, lat, alt = coord.split(' ')
 
         # Calculate ground speed.
